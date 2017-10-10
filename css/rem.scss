@@ -1,0 +1,49 @@
+$sc:25; 
+@mixin dw(){  
+    position: fixed;
+}
+*{margin: 0;padding: 0;}
+html{
+    width: 100%;
+    height: 100%;
+    body{
+        @extend html; 
+        box-sizing: border-box;
+        padding-top: (234.375+50)/$sc+rem;
+        padding-bottom: 50/$sc+rem;     
+        
+    header{
+        width: 100%;
+        height:50/$sc+rem;
+        @include dw;
+        top: 0; 
+        background: green;  
+    }
+    .banner img{
+        width: 100%;
+        @include dw;
+        top: 50/$sc+rem;
+        
+         
+    }
+    section{
+        @extend html;
+        overflow: auto;
+        ul{
+            list-style: none;
+        }
+        
+    } 
+   footer{
+       width: 100%;
+       height: 50/$sc+rem;
+       @include dw;
+       bottom: 0;
+       background: green;
+       
+   }
+    
+    
+    
+    }
+}
